@@ -36,6 +36,8 @@ assumptions should be based on your interpretation of the law and how you implem
 code.
 Deliverable – Complete the questionnaire at https://forms.office.com/r/EEYHGMZNwY
 before class on Tuesday
+
+
 EID 101 Section E
 “Coding the Law” Design Specification
 Your program should issue traffic tickets based on the following logic. You are to
