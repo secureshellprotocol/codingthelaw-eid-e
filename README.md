@@ -1,4 +1,4 @@
-
+<pre>
 Coding the Law
 EID 101 Workshop Assignment
 Instructions
@@ -50,3 +50,4 @@ against the driver, the worst case. At least 5.0 minutes must transpire before a
 ticket may be issued. Tickets may be issued immediately upon the start of the sensor
 data. As long as a ticket meets the above criteria there is no limit to the total number of
 tickets that may be given.
+</pre>
