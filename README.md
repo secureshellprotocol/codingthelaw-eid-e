@@ -34,7 +34,7 @@ should be based on the law and the per section guidance provided above. However,
 make a list of at least 5 assumptions you made during the design and coding process. These
 assumptions should be based on your interpretation of the law and how you implemented it in
 code.
-Deliverable – Complete the questionnaire at https://forms.office.com/r/EEYHGMZNwY
+Deliverable – Complete the questionnaire at 
 before class on Tuesday
 
 
