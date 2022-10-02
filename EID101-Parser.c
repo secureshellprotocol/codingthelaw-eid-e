@@ -75,5 +75,41 @@ int main()
 	*								 *
 	*********************************/
 	
+	float lastTimeTicketed = 0.0;
+	int ticketsIssued = 0;
+	//assume every reading is speed + 3, so 10 becomes 7
+	for(i = 0; i < 123; i++){
+		int speedLimitIndex;
+		if(lastTimeTicketed != 0 && drivetime[i] - lastTimeTicketed <= 5){
+			continue;
+		}
+		//determine limit
+		for(speedLimitIndex = 1; speedLimitIndex < 10; speedLimitIndex++){
+			if(limittime[speedLimitIndex] > drivetime[i]){
+				break;
+			}
+		}
+		speedLimitIndex--;
+		//printf("speed limit index:d\n", speedLimitIndex);
+		if(speedlimit[speedLimitIndex] > 30.0){
+			if(speedlimit[speedLimitIndex]+13.0 <= drivespeed[i]){
+				printf("speed: %f\n", drivespeed[i]);
+				printf("limit: %f\n", speedlimit[speedLimitIndex]+13.0);
+				ticketsIssued++;
+				lastTimeTicketed = drivetime[i];
+			}
+		} else{	
+			if(speedlimit[speedLimitIndex]+8.0 <= drivespeed[i]){
+				
+				printf("speed: %f\n", drivespeed[i]);
+				printf("limit: %f\n", speedlimit[speedLimitIndex]+13.0);
+
+				ticketsIssued++;
+				lastTimeTicketed = drivetime[i];
+			}
+		}
+
+	}
+	printf("tickets issued: %d\n", ticketsIssued);
 	return(0);
 }
