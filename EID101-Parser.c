@@ -19,10 +19,10 @@ int main()
 {
 	FILE* driving; 
 	FILE* limit;
-	float drivetime[12425];	//First column of driving_data.csv, time that vehicle speed was recorded
-	float drivespeed[12425]; //There are 12425 entries of vehicle speed
+	float drivetime[122];	//First column of driving_data.csv, time that vehicle speed was recorded
+	float drivespeed[122]; //There are 12425 entries of vehicle speed
 	float limittime[10];	//Time that speed limit went into effect 
-	float speedlimit[10];	//There are 10 sections of road with various speed limits
+	float speedlimit[11];	//There are 10 sections of road with various speed limits
 	char line[512];			//No line in the file is more than 512 characters (actually, all are far less)
 	const char* token;		//Variable used in parsing the line read from the file
 	int i=0;
@@ -36,7 +36,7 @@ int main()
 		
 	fgets(line, sizeof(line), driving); //discard first line, header information
 	
-	for (i=0; i<12425; i++)  // The driving data file contains 12425 lines.
+	for (i=0; i<123; i++)  // The driving data file contains 12425 lines.
 	{
 		fgets(line, sizeof(line), driving); // Read one line of the file
 		token = strtok(line, ",");	// Parse first value from string
